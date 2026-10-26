@@ -1,0 +1,10 @@
+services:
+  web:
+    image: nginx:latest
+    container_name: git-demo-web
+    ports:
+      - "8085:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    restart: unless-stopped
+
